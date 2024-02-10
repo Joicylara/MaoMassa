@@ -1,0 +1,46 @@
+.title{
+    color: #000;
+    background-color: #51e0d9;
+    transition: 0.3s;
+    border-radius: 50px;
+    border: 10px;
+    box-shadow: 0 8px 16px 0 rgb(23, 6, 172);
+}
+
+
+
+.soma{
+    color: #ca5252;
+    box-shadow: 0 4px 8px 0 rgba(172, 34, 34, 0.2);
+    transition: 0.3s;
+}
+.soma:hover {
+    box-shadow: 0 8px 16px 0 rgb(240, 13, 13);
+}
+
+.sub{
+    color: #450752;
+    box-shadow: 0 4px 8px 0 rgba(231, 24, 214, 0.2);
+    transition: 0.3s;
+}
+.sub:hover {
+    box-shadow: 0 8px 16px 0 rgba(53, 3, 68, 0.959);
+}
+
+.mult{
+    color: #e4c30a;
+    box-shadow: 0 4px 8px 0 rgba(229, 240, 82, 0.911);
+    transition: 0.3s;
+}
+.mult:hover {
+    box-shadow: 0 8px 16px 0 rgba(230, 170, 5, 0.911);
+}
+
+.divisao{
+    color: #19d113;
+    box-shadow: 0 4px 8px 0 rgba(25, 211, 72, 0.2);
+    transition: 0.3s;
+}
+.divisao:hover {
+    box-shadow: 0 8px 16px 0 rgb(6, 201, 35);
+}

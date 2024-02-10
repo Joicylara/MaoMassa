@@ -1,0 +1,21 @@
+Parametro: é valor, informação, que a função passa para usar ela no código
+Parâmetros de funções são valores passados para uma função quando ela é chamada, eles permitem que a função receba informações do código que a chamou e use essas informações para realizar sua tarefa.
+Argumento: Argumentos de funções são os valores passados para uma função quando ela é chamada. Eles correspondem aos parâmetros da função e fornecem os valores específicos que a função usará para realizar sua tarefa. É importante garantir que os argumentos correspondam aos parâmetros da função em tipo e quantidade.
+valores que foram passados no parametro
+
+Funções nativas: são aquelas que fazem parte, nasceram, com a linguagem. Elas são úteis para realizar operações comuns, como manipular strings, números, datas outros tipos.
+Algumas das funções nativas são:
+parseInt() & parseFloat()
+String() & Number() & String.length
+String.toUpperCase() & String.toLowerCase()
+String.replace() & String.slice()
+Qual a diferença de parseInt e Number: diferença de performace. Ambos transformam String em numeros
+String.length: tamanho do texto, quantidade de caracteres no texto.
+String.toUpperCase(): é um método que retorna o valor da String em letras maiúsculas.
+ String.toLowerCase(): é um método que retorna o valor da String em letras minuscúlas.
+String.replace() é um método que retorna uma nova string com algumas ou todas as correspondências substituídas por um caractere determinado (ou caracteres indeterminados). 
+Usa da seguinde maneira: console.log(nome.replace(" onde estiver algo", "substitua por outro"))
+String.slice() é um método que extrai uma parte de uma string e a retorna como uma nova string, sem modificar a string original.
+Usando o String.slice: console(nome.slice(0,6)) extrai, apaga, tipo nome é Maria Clara, fica Maria
+Document.write() é um método que recebe como argumento um valor e o escreve (insere) no documento (HTML).
+
