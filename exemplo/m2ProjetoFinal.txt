@@ -1,0 +1,103 @@
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const birthDate = document.getElementById("birthDate");
+const cpf = document.getElementById("cpf");
+const weight = document.getElementById("Weight");
+const address = document.getElementById("address");
+const bloodType = document.getElementById("bloodType");
+const submit = document.getElementsByClassName("btnRegistration");
+const date = new Date();
+
+actualMonth = date.getMonth();
+actualDay = date.getDay();
+minYear = date.getFullYear() - 69;
+maxYear = date.getFullYear() - 16;
+console.log(actualDay)
+birthDate.min = minYear + '-' + '0' + actualMonth + '-' + '0' + actualDay;
+birthDate.max = maxYear + '-' + '0' + actualMonth + '-' + '0' + actualDay;
+
+class User {
+    constructor(
+        userName,
+        name,
+        email,
+        birthDate,
+        cpf,
+        weight,
+        address,
+        bloodType,
+        password,
+        logged
+    ) {
+        this.userName = userName;
+        this.name = name;
+        this.email = email;
+        this.birthDate = birthDate;
+        this.cpf = cpf;
+        this.weight = weight;
+        this.address = address;
+        this.bloodType = bloodType;
+        this.password = password;
+        this.logged = logged;
+    }
+}
+
+submit[0].addEventListener("click", (event) => {
+    event.preventDefault();
+
+    // Função para validar o CPF
+    function validateCPF(cpf) {
+        cpf = cpf.replace(/[^\d]/g, ""); // Remove caracteres não numéricos
+
+        // Verifica se o CPF possui 11 dígitos
+        if (cpf.length !== 11) {
+            displayError(cpf, "O CPF deve conter 11 dígitos");
+            return false;
+        } else if (cpf.trim() === "") {
+            displayError(cpf, "O CPF é obrigatório");
+            return false;
+        }
+        // Retorne true se válido, false se inválido
+        return true;
+    }
+
+
+
+    // Função para exibir mensagem de erro no campo
+    function displayError(inputField, message) {
+        const item = inputField.parentElement;
+        const errorMessage = item.querySelector("p"); // Seletor para a mensagem de erro
+
+        errorMessage.innerText = message;
+        item.classList.add("error");
+    }
+
+
+    // Limpar mensagens de erro
+    function clearErrors() {
+        const errorMessages = document.querySelectorAll("p");
+        errorMessages.forEach(errorMessage => {
+            errorMessage.innerText = "";
+            errorMessage.parentElement.classList.remove("error");
+        });
+    }
+
+    // Limpar mensagens de erro antes de iniciar a validação
+    clearErrors();
+
+    // Verificações de dados
+    if (!name.value.trim()) {
+        displayError(name, "O nome é obrigatório");
+        return;
+    }
+
+    if (!email.value.trim()) {
+        displayError(email, "O email é obrigatório");
+        return;
+    }
+
+    if (!cpf.value.trim() || !validateCPF(cpf.value)) {
+        return;
+    }
+
+});

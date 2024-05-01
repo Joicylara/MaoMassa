@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 26, 121, 1) 13%, rgba(0, 212, 255, 1) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+.img{
+    position: fixed;
+}
+
+#title{
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 3rem;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 26, 121, 1) 83%, rgba(2, 0, 36, 1) 100%);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header {
+    padding: 20px 10%;
+    display: flex;
+    justify-content: end;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.navbar a:hover {
+    color: #b3b3b3;
+    text-decoration: underline;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #b1d7f0;
+    width: 90%;
+    max-width: 800px;
+    border: 2px solid #141414;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 0 0 1px 1px;
+}
+
+.container-quiz {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 18px;
+}
+
+#n-questao {
+    color: #000;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 2px solid #091A78;
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+
+.respostas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.respostas .btn_resposta {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 16px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #091A78;
+    cursor: pointer;
+    /*nao esta pegando*/
+}
+
+.btn_resposta:hover {
+    background: #4169E1;
+    border-color: #4169E1;
+}
+
+.button #start,
+.submit-resposta,
+.botao-jogar-novamente {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #091A78;
+}
+
+#start:hover{
+    color: #000;
+    background: #05a805;
+    border-color:#05a805
+}
+
+.submit-resposta:hover{
+    color: #000;
+    background: #edfd0f;
+    border-color:#edfd0f
+}
+
+.botao-jogar-novamente:hover{
+    background: #c641e1;
+    border-color:#c641e1
+}
+
+.hide{
+    display: none;
+}
+
+.questao{
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.correto, .verde{
+    background: #05a805;
+}
+
+.incorreto{
+    background: #e60808;
+}
+
+
+
+
+

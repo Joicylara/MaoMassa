@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../img/Blooddonation-pana.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-color: #D14A4A;
+}
+
+.rightRegistration {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    width: 50%; 
+    height: 100%; 
+    padding: 20px; 
+}
+
+.cardRegistration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%; 
+    min-height: 80%; 
+    padding: 30px 36px;
+    background: rgba(217, 217, 217, 0.6); 
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px 0px #000;
+    overflow-y: auto;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 1px 0;
+    height: 13.5vh;
+}
+
+.field>input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 13px;
+    background: rgba(217, 217, 217, 0.6);
+    color: #000;
+    font-size: 12pt;
+    box-sizing: border-box; 
+}
+
+.field>select {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 13px;
+    background: rgba(217, 217, 217, 0.6);
+    color: #000;
+    font-size: 12pt;
+    box-shadow: 0;
+    margin-top: 2px; 
+    margin-bottom: 10px;
+}
+
+.field>label {
+    color: #000;
+}
+
+.registration {
+    color: #000;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(252, 5, 5, 0.5);
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+
+p {
+    visibility: hidden;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.btn .btnRegistration {
+    width: 50%;
+    border-radius: 10px;
+    font-weight: bolder;
+    border: none;
+    background: #ff0000;
+    color: #fff;
+    cursor: pointer;
+    margin: 0;
+    height: 4vh;
+    margin-top: 18px;
+}
+
+.btn .btnRegistration:hover {
+    box-shadow: 0px 6px 14px -6px #070707;
+}
+
+/* .btn button {
+    margin: 10px;
+    padding: 6px 0;
+}*/
+
+.error input {
+    border-color: #ff0000;
+}
+
+.error p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #ff0000;
+    visibility: visible;
+}
+
+
+#password-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 99%;
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+
+#eye {
+    background: url(../img/eye-closed.png);
+    background-size: 1.2vw 1.6vh;
+    background-repeat: no-repeat;
+    border: none;
+    width: 1.2vw;
+    height: 1.6vh;
+}
+
+#eye:hover {
+    cursor: pointer;
+}
+
+@media (orientation: portrait) {
+    #eye {
+        width: 2vw;
+        height: 1.5vh;
+    }
+}
+
+/* Media queries para tornar responsivo */
+@media screen and (max-width: 768px) {
+    .rightRegistration {
+        width: 100%; 
+        padding: 10px; 
+    }
+
+    .cardRegistration {
+        width: 100%; 
+    }
+
+    #eye {
+        width: 3vw;
+        height: 2.5vh;
+    }
+}

@@ -1,0 +1,18 @@
+ jQuery é uma biblioteca de código aberto que contém funções da linguagem de programação JavaScript 
+ que interage com páginas HTML. 
+ Ela foi desenvolvida para simplificar o Javascript e encurtar a quantidade de código. 
+
+propriedades: valores
+metódos: ações
+
+Usam o JQuery em momentos de migração, pois dava trabalho no quesito de ter biblioteca nativa
+
+jQuery é uma biblioteca de JavaScript que simplifica a manipulação e interação com elementos HTML em páginas web, 
+oferecendo uma sintaxe simplificada e compatibilidade com diversos navegadores. Ele é usado para tarefas como 
+manipulação de DOM, eventos, animações e chamadas AJAX. Embora tenha sido popular, com o avanço do JavaScript moderno 
+e dos navegadores, sua necessidade diminuiu, mas ainda é amplamente utilizado em muitos projetos web.
+
+
+
+
+

@@ -1,0 +1,19 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const cadastroTable = document.getElementById('cadastroTable').getElementsByTagName('tbody')[0];
+    // Recupere os dados armazenados localmente
+    const cadastrosSalvos = JSON.parse(localStorage.getItem('cadastros')) || [];
+
+    cadastrosSalvos.forEach((cadastro, index) => {
+        const row = cadastroTable.insertRow();
+        row.innerHTML = `
+            <td>${cadastro.materia}</td>
+            <td>${cadastro.semestre}</td>
+            <td>${cadastro.professor}</td>
+            <td>${cadastro.sala}</td>
+            <td>
+                <button onclick="editarCadastro(${index})">Editar</button>
+                <button onclick="excluirCadastro(${index})">Excluir</button>
+            </td>
+        `;
+    });
+});

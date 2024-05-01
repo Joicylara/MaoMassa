@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz do milhao</title>
+</head>
+<body>
+    <main id="container">
+        <div class="container-quiz">
+            <div>
+                 <span id="n-questao">Pergunta 0/0</span>
+            </div>
+            <div id="container-questao"> 
+                <h2>Qual é a função do comando "console.log()" em JavaScript?</h2>
+            </div>
+                <div class="respostas"> 
+                    <div class="alternativa">
+                        <button onclick="respostaErrada()" class="btn_resposta">a Realizar uma operação matemática.</button>
+                        <button onclick="respostaErrada()" class="btn_resposta">b Um sistema operacional.</button>
+                        <button onclick="respostaCerta()" class="btn_resposta">c Exibe mensagem no Console do navegador.</button>
+                        <button onclick="respostaErrada()" class="btn_resposta">d Criar uma variável.</button>
+                    </div>
+                    <div id="container-questao"> 
+                        <h2>O que é JavaScript?</h2>
+                    </div>
+
+                    <div class="alternativa2">
+                       <button onclick="respostaCerta()" class="btn_resposta">a Uma linguagem de programação orientada a objetos.</button>
+                       <button onclick="respostaErrada()"class="btn_resposta">b Um sistema operacional.</button>
+                       <button onclick="respostaErrada()" class="btn_resposta">c Um editor de texto.</button>
+                       <button onclick="respostaErrada()" class="btn_resposta">d Um banco de dados.</button>
+                    </div>
+                    <div id="container-questao"> 
+                        <h2>O que é um array em JavaScript?</h2>
+                    </div>
+                <div class="alternativa3">
+                        <button onclick="respostaErrada()"  class="btn_resposta">a Um tipo de variável que armazena apenas números.</button>
+                        <button onclick="respostaErrada()"  class="btn_resposta">b Um tipo de variável que armazena apenas strings.</button>
+                        <button onclick="respostaCerta()"  class="btn_resposta">c Um tipo de variável que armazena múltiplos valores em uma única variável.</button>
+                        <button onclick="respostaErrada()"  class="btn_resposta">d Nenhuma das alternativas anteriores.</button>
+                    </div>
+                <button id="submit-resposta">Próximo</button>
+            </div>
+        </div>
+        <div class="button">
+            <button class="final botao-jogar-novamente">Jogar Novamente</button>
+        </div>
+    </main>
+</body>
+</html>

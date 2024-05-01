@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#getWeatherButton").click(function(){
+                var city = $("#cityInput").val(); // Pega o valor do campo de entrada de cidade
+
+                // Realiza a requisição AJAX
+                $.ajax({
+                    url: "https://goweather.herokuapp.com/weather/" + city,
+                    type: "GET",
+                    success: function(data) {
+                        // Manipula os dados retornados
+                        $("#weatherResult").html("<p>" + data.description + "</p><p>Temperature: " + data.temperature + "</p>");
+                    },
+                    error: function(xhr, status, error) {
+                        // Manipula erros
+                        $("#weatherResult").html("Erro ao obter dados climáticos: " + error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Weather API Example</h2>
+    <label for="cityInput">Digite o nome da cidade:</label>
+    <input type="text" id="cityInput">
+    <button id="getWeatherButton">Obter Clima</button>
+    <div id="weatherResult"></div>
+</body>
+</html>

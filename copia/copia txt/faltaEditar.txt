@@ -1,0 +1,65 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const cadastroTable = document.getElementById('cadastroTable').getElementsByTagName('tbody')[0];
+    const form = document.getElementsByClassName('cadastroForm');
+    const cadastrosSalvos = JSON.parse(localStorage.getItem('cadastros')) || [];
+
+    function exibirCadastros() {
+        cadastroTable.innerHTML = ''; // Limpa a tabela antes de exibir os cadastros
+
+        cadastrosSalvos.forEach((cadastro, index) => {
+            const row = cadastroTable.insertRow();
+            row.innerHTML = `
+                <td>${cadastro.materia}</td>
+                <td>${cadastro.semestre}</td>
+                <td>${cadastro.professor}</td>
+                <td>${cadastro.sala}</td>
+                <td>
+                    <button onclick="editarCadastro(${index})">Editar</button>
+                    <button onclick="excluirCadastro(${index})">Excluir</button>
+                </td>
+            `;
+        });
+    }
+
+    exibirCadastros(); // Exibe os cadastros ao carregar a página
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const materia = form.querySelector('#materia').value;
+        const semestre = form.querySelector('#semestre').value;
+        const professor = form.querySelector('#professor').value;
+        const sala = form.querySelector('#sala').value;
+
+        const novoCadastro = { materia, semestre, professor, sala };
+        cadastrosSalvos.push(novoCadastro);
+
+        localStorage.setItem('cadastros', JSON.stringify(cadastrosSalvos));
+
+        exibirCadastros(); // Atualiza a exibição dos cadastros
+        form.reset(); // Limpa o formulário após a submissão
+    });
+});
+
+function editarCadastro(index) {
+    const cadastrosSalvos = JSON.parse(localStorage.getItem('cadastros')) || [];
+    const cadastro = cadastrosSalvos[index];
+    const form = document.getElementById('cadastroForm');
+
+    form.querySelector('#materia').value = cadastro.materia;
+    form.querySelector('#semestre').value = cadastro.semestre;
+    form.querySelector('#professor').value = cadastro.professor;
+    form.querySelector('#sala').value = cadastro.sala;
+
+    // Adicione um campo oculto para armazenar o índice do cadastro em edição
+    form.querySelector('#editIndex').value = index;
+}
+
+function excluirCadastro(index) {
+    if (confirm('Tem certeza que deseja excluir este cadastro?')) {
+        const cadastrosSalvos = JSON.parse(localStorage.getItem('cadastros')) || [];
+        cadastrosSalvos.splice(index, 1);
+        localStorage.setItem('cadastros', JSON.stringify(cadastrosSalvos));
+        location.reload(); // Recarrega a página para atualizar a tabela
+    }
+}

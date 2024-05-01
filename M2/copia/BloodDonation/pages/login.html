@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doação de Sangue</title>
+        <link rel="stylesheet" href="../css/register.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="../img/gotinha_icon.png" type="image/png">
+        <script src="../js/login.js" defer></script>
+        <script src="../js/hiddenPassword.js" defer></script>
+    </head>
+
+<body>
+    <main class="main">
+        <form id="rightRegistration" class="rightRegistration">
+            <div class="cardRegistration">
+                <h1 class="registration">LOGIN</h1>
+                <div class="field">
+                    <label for="name">Nome Completo/Email *</label>
+                    <input type="text" id="name" placeholder="Nome completo">
+                    <p>Obrigatório preencher nome</p>
+                
+                </div>
+                <div class="field">
+                    <div id="password-label">
+                        <label for="password">Senha *</label>
+                        <button id="eye"></button>
+                    </div>
+                    <input type="password" id="password" placeholder="Senha">
+                    <p>Obrigatório preencher telefone</p>
+                </div>
+                <span id="erro"></span>
+                <div class="btn">
+                    <button type="submit" class="btnRegistration">Logar</button>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+
+body{
+    color: white;
+    background-color: #191919;
+    font-family: 'Times New Roman', Times, serif
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30x;
+    
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+}
+
+footer{ /*centralizar as informações do rodapé*/
+    display: flex;
+    justify-content: center;
+}
+
+footer a{
+    margin: 10px;
+    text-align: center;
+}
+
+footer p{
+    margin-top: 0.1px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.container{
+    padding:  1px 50px;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+.contato{
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+section{
+    margin: 20px;
+}
+
+@media all and (max-width: 600px){
+
+    .center{
+        text-align: start;
+        padding: 40px;
+    }
+
+    header img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid #f9004d;
+    }
+
+    footer a:hover{ /*quando passar o cursor do mouse irá ficar azul na escrita do git e do linkedin*/
+        color: #f9004d;
+    }
+
+    
+    .portfolio span{
+        color: #f9004d;
+    }
+    
+    #nome{
+        text-shadow:3px 4px 2px #f9004d;
+    }
+
+    li{
+        list-style: none;
+        display: flex;
+        margin: 3px;
+        margin-left: 140px;  
+    }
+
+    li a:hover{
+        color: #f9004d;
+    }
+
+}
+
+@media all and (min-width: 601px){
+    .center{
+        text-align: center;
+        padding: 40px;
+    }
+
+    header img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid #0000ff;
+    }
+
+    footer a:hover{ /*quando passar o cursor do mouse irá ficar azul na escrita do git e do linkedin*/
+        color: #0000ff;
+    }
+
+    .portfolio span{
+        color: #0000ff;
+    
+    }
+
+    
+    li a:hover{
+        color: #0000ff
+    }
+    
+    #nome{
+        text-shadow:3px 4px 2px #0000ff;
+    } 
+}

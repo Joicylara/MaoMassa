@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 id="titulo">
+        Teste
+    </h1>
+    <img src="" alt="">
+    <script>
+        // const titulo = document.getElementById(titulo);
+        // titulo.innerText = 'Teste';
+
+        // $("h1").text("Teste").css("color", "pink");
+        //attr: referente ao atributo
+        // $("img").attr("src", "img/jquery.png");
+        // ".then é um delay para as informações retornarem"
+        
+        fetch("https://bobsburgers-api.herokuapp.com/characters/?limit=9&skip=265")
+        .then(res => res.json()).then(data =>{
+    
+            //const data retorna o array
+            $("h1").text(data[0].name);
+            $("img").attr("src", data[0].image);
+        })
+    </script>
+</body>
+
+</html>

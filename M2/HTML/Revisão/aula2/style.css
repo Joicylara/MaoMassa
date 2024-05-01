@@ -1,0 +1,40 @@
+.active:active{
+    color: yellow;
+}
+
+.hover:hover{
+    color:blue;
+}
+
+.after::after{
+    content: " alguma coisa";
+    color: aqua;
+}
+
+li::marker{
+    color: rgb(253, 30, 216);
+}
+
+h1{
+    display: flex;
+    flex-direction: row;
+    background-color: pink;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+h2{
+    display: flex;
+    flex-direction: column;
+   /* background-color: pink;*/
+    width: 100%;
+    justify-content: center;
+}
+
+h3{
+    display: flex;
+    flex-direction: row;
+     /*background-color: pink;*/
+    width: 100%;
+    justify-content: center;
+}

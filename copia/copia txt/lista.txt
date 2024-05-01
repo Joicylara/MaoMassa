@@ -1,0 +1,130 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Selecione o elemento <main>
+    const mainElement = document.querySelector('main');
+
+    // Recupere os dados armazenados localmente
+    const cadastroSalvo = localStorage.getItem('cadastro');
+    if (cadastroSalvo) {
+        const cadastro = JSON.parse(cadastroSalvo);
+        // Crie uma instância da classe Lista com os dados recuperados
+        const listaCadastro = new Lista(cadastro.materia, cadastro.semestre, cadastro.professor, cadastro.sala);
+        // Crie o card com os dados da lista
+        const card = listaCadastro.criarCard();
+        
+        // Adicione o card ao main
+        mainElement.appendChild(card);
+
+        // Crie o botão "Adicionar Matéria"
+        const botaoAdicionar = document.createElement('button');
+        botaoAdicionar.textContent = 'Adicionar Matéria';
+        botaoAdicionar.classList.add('adicionarMateria');
+        // Adicione o evento de clique ao botão
+        botaoAdicionar.addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    
+        // Adicione o botão após o card
+        mainElement.appendChild(botaoAdicionar);
+    }
+});
+
+class Lista {
+    constructor(materia, semestre, professor, sala) {
+        this.materia = materia;
+        this.semestre = semestre;
+        this.professor = professor;
+        this.sala = sala;
+    }
+
+    criarCard() {
+        // Crie um elemento de card
+        const card = document.createElement('div');
+        card.classList.add('cardLista');
+    
+        // Crie o corpo do card
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+    
+        const titulo = document.createElement('h1');
+        titulo.classList.add('tituloSemestre');
+        titulo.textContent = `Semestre ${this.semestre}`;
+    
+        // Crie uma lista não ordenada
+        const lista = document.createElement('ul');
+        lista.classList.add('lista');
+    
+        // Crie os itens da lista
+        const itemMateria = document.createElement('li');
+        itemMateria.textContent = `Matéria: ${this.materia}`;
+    
+        const itemProfessor = document.createElement('li');
+        itemProfessor.textContent = `Professor: ${this.professor}`;
+    
+        const itemSala = document.createElement('li');
+        itemSala.textContent = `Sala: ${this.sala}`;
+    
+        // Adicione os itens à lista
+        lista.appendChild(itemMateria);
+        lista.appendChild(itemProfessor);
+        lista.appendChild(itemSala);
+    
+        // Adicione a lista ao corpo do card
+        cardBody.appendChild(titulo);
+        cardBody.appendChild(lista);
+    
+        // Adicione o corpo do card ao card
+        card.appendChild(cardBody);
+    
+        return card;
+    }
+}
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 110vh;
+    background: rgb(204,194,233);
+    background: linear-gradient(90deg, rgba(204,194,233,1) 0%, rgba(195,167,237,1) 15%, rgba(147,80,224,1) 30%, rgba(80,52,164,1) 55%, rgba(56,62,209,1) 73%, rgba(93,102,242,1) 100%);
+}
+
+.cardLista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: 30%;
+    padding: 20px 26px;
+    background: #dfdadc;
+    border-radius: 10%;
+    box-shadow: 0px 10px 40px #000;
+}
+
+
+.adicionarMateria{
+    margin-top: 140px;
+    width: 50%;
+    padding: 20px 26px;
+    border-radius: 10px;
+    font-weight: bolder;
+    border: none;
+    background: #238592;
+    color: #fff;
+    cursor: pointer;
+}
+
+.adicionarMateria:hover{
+    box-shadow: 0px 6px 14px -6px #4ce7ac;
+}

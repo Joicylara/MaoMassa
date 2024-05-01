@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #171D76;
+}
+
+.main {
+    padding: 2vw;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 26, 121, 1) 13%, rgba(0, 212, 255, 1) 100%);
+    overflow-y: auto;
+}
+
+.header {
+    padding: 20px 10%;
+    display: flex;
+    justify-content: end;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.navbar a:hover {
+    color: #b3b3b3;
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home {
+    display: none;
+} 
+
+.sobre {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 25px;
+    box-shadow: 0 0 10px #0a0a0a;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s ease;
+}
+
+.sobre.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sobre h2 {
+    font-size: 50px;
+    color: #4169E1;
+}
+
+.sobre .info {
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+.sobre .continuar-sair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.continuar-sair .sair-info,
+.continuar-info {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 45px;
+    background: #4169E1;
+    border: 2px solid #4169E1;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.continuar-sair .sair-info {
+    background: transparent;
+    color: #4169E1;
+}
+
+.continuar-sair .sair-info:hover {
+    background: #4169E1;
+    color: #fff
+}
+
+.continuar-sair .continuar-info:hover {
+    border-color: #084c8b;
+}
+
+.btn_resposta, .resposta-certa {
+    /* display: block; */
+    display: flex;
+    align-items: flex-start;
+    padding: 15px; 
+    margin-top: 8px;
+    font-size: 16px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #091A78;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 100%; 
+    text-align: center;
+    height: auto; 
+}
+
+.btn_resposta:hover, .resposta-certa:hover {
+    background-color: #4169E1;
+    transform: scale(1.05);
+}
+
+
+.quiz_sobre .quiz_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quiz_footer .total_questao {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.quiz_footer .next {
+    background: #a5c5e4;
+    border: 2px solid #091A78;
+    border-radius: 10px;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}

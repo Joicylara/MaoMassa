@@ -1,0 +1,29 @@
+.fullBody {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.criteria {
+    display: flex;
+    align-items: center; 
+    width: 80%; 
+    height: 91%;
+    max-width: 500%; 
+    background-color: rgb(191, 188, 188);
+}
+
+.criteria .image {
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+}
+
+.criteria .content {
+    flex: 1; 
+}
+
+.criteria img {
+    max-width: 100%; 
+    height: auto;
+}

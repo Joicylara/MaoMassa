@@ -1,0 +1,36 @@
+body {display: flex; align-items: center; justify-content: center; height: 100vh;}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 20rem;
+    text-align: center;
+}
+.roxo {
+    background: none;
+    border: 2px solid rgb(139, 4, 202);
+    color: rgb(139, 4, 202);
+    padding: 0.5rem 2rem;
+}
+
+.vermeio {
+    background: none;
+    border: 2px solid rgb(255, 11, 11);
+    color: rgb(255, 11, 11);
+    padding: 0.5rem 2rem;
+}
+
+.roxo:hover {
+    box-shadow: 0px 0px 10px rgb(139, 4, 202);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.vermeio:hover {
+    box-shadow: 0px 0px 10px rgb(255, 11, 11);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+h1::first-line {
+    color: blue;
+}

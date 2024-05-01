@@ -1,0 +1,5 @@
+Aprofunde no conteúdo visto em aula seguindo as orientações solicitadas no PDF
+Encontre respostas para as perguntas:
+O que é Commit semântico?
+Por que utilizar os commits semânticos?
+Qual o impacto dos commits semânticos em nossos projetos?
